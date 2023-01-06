@@ -52,9 +52,10 @@ public class UserService {
         adminRoles.add(adminRole);
         adminUser.setRole(adminRoles);
         userDao.save(adminUser);
+        /** https://campus-maintenance-mgt.herokuapp.com/ */
 
         Stakeholder user = new Stakeholder();
-        user.setUserName("bsc-inf-20-19");
+        user.setUserName("bsc-inf-02-19");
         user.setUserPassword(getEncodedPassword("123"));
         user.setUserFirstName("Ben");
         user.setUserLastName("Kaponda");
@@ -62,6 +63,16 @@ public class UserService {
         userRoles.add(userRole);
         user.setRole(userRoles);
         userDao.save(user);
+
+        Stakeholder user1 = new Stakeholder();
+        user1.setUserName("bsc-inf-20-19");
+        user1.setUserPassword(getEncodedPassword("123"));
+        user1.setUserFirstName("Mpatso");
+        user1.setUserLastName("Mphepo");
+        Set<Role> userRoles2 = new HashSet<>();
+        userRoles2.add(userRole);
+        user1.setRole(userRoles2);
+        userDao.save(user1);
     }
 
     public Stakeholder registerNewUser(Stakeholder user) {

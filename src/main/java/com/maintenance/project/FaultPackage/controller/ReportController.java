@@ -21,7 +21,6 @@ public class ReportController {
     }
 
     @PostMapping("/report")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public Report createReport(@RequestBody Report report) {
         return reportService.createReport(report);
     }

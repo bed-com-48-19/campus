@@ -25,7 +25,8 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
             "/auth/userinfo",
             "/user",
             "/register",
-            "/api/v1/**"
+            "/api/v1/**",
+            "/api/v1/report"
     };
     @Autowired
     private JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
